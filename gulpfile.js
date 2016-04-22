@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var jshint = require('gulp-jshint');
 var webpack = require('gulp-webpack');
 
 var wpConfig = require('./webpack.config');
@@ -22,6 +23,8 @@ function buildHtml(){
 
 function buildJs(){
     return gulp.src('app/main.js')
-    .pipe(webpack(wpConfig))
+    .pipe(jshint({ esversion: 6 }))
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(webpack(wpConfig))    
     .pipe(gulp.dest('dist/'));
 }
