@@ -77,26 +77,26 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var HelloWorld = function (_React$Component) {
-	  _inherits(HelloWorld, _React$Component);
+	    _inherits(HelloWorld, _React$Component);
 
-	  function HelloWorld() {
-	    _classCallCheck(this, HelloWorld);
+	    function HelloWorld() {
+	        _classCallCheck(this, HelloWorld);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(HelloWorld).apply(this, arguments));
-	  }
-
-	  _createClass(HelloWorld, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'h1',
-	        null,
-	        'HelloWorld'
-	      );
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(HelloWorld).apply(this, arguments));
 	    }
-	  }]);
 
-	  return HelloWorld;
+	    _createClass(HelloWorld, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Hello World'
+	            );
+	        }
+	    }]);
+
+	    return HelloWorld;
 	}(_react2.default.Component);
 
 	_reactDom2.default.render(_react2.default.createElement(HelloWorld, null), document.getElementById('root'));
