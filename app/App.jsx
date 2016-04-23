@@ -18,11 +18,23 @@ class Header extends React.Component {
 }
 
 class HelloWorld extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = { counter: 0 };
+        this.handleClick = this.handleClick.bind(this);
+    }
+    
+    handleClick() {
+        this.setState({ counter: this.state.counter + 1 });
+    }
+    
     render() {
         return (
             <div>
                 <Header text="This is the page header" />
-                <h1>Hello World</h1>
+                <h1 onClick={this.handleClick}>Hello World</h1>
+                <div>{this.state.counter}</div>
             </div>
         );
     }
