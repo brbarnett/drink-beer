@@ -30,11 +30,18 @@ class HelloWorld extends React.Component {
     }
     
     render() {
+        var trueDiv, falseDiv;
+        
+         if(true) trueDiv = <div>conditional: true</div>;
+         if(false) falseDiv = <div>conditional: false</div>;
+         
         return (
             <div>
                 <Header text="This is the page header" />
                 <h1 onClick={this.handleClick}>Hello World</h1>
                 <div>{this.state.counter}</div>
+                {trueDiv}
+                {falseDiv}
             </div>
         );
     }
