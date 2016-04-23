@@ -19,6 +19,7 @@ class Pub extends React.Component {
     render() {
         return (
             <div className="container">
+                <h1>{this.props.name}</h1>
                 <div className="col-xs-12 col-md-3">
                     <Customer />
                 </div>
@@ -35,7 +36,7 @@ class Pub extends React.Component {
         );
     }
 }
-// Pub.defaultProps = { text: 'hello' };
-// Pub.propTypes = { text: React.PropTypes.string.isRequired };
+Pub.defaultProps = { name: '' };
+Pub.propTypes = { name: React.PropTypes.string.isRequired };
 
 module.exports = Pub; 
