@@ -8,12 +8,10 @@ import drinkBeerApp from './reducers'
 
 const store = createStore(drinkBeerApp);
 
-console.log(store.getState());
-
 const rootElement = document.getElementById('root')
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+    <Provider store={ store }>
+        <App />
+    </Provider>,
   rootElement
-)
+  );

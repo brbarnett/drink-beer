@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+// import { bindActionCreators } from 'redux'
+// import * as Actions from '../actions'
 
 import BartenderContainer from './BartenderContainer'
 import CustomerContainer from './CustomerContainer'
@@ -23,4 +26,18 @@ const App = () => (
   </div>
 );
 
+// function mapStateToProps(state) {
+//   return {
+//     keg: state.keg,
+//     mug: state.mug
+//   }
+// }
+
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     actions: bindActionCreators(Actions, dispatch)
+//   }
+// }
+
+// export default connect(mapStateToProps, mapDispatchToProps)(App)
 export default App

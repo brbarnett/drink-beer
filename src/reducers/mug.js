@@ -3,12 +3,16 @@ import {
   POUR_BEER
 } from '../constants/ActionTypes'
 
- const mug = (state = 0, action) => {
+ const mug = (state = { remaining: 0 }, action) => {
   switch (action.type) {
     case DRINK_BEER:
-      return state - 20;
+      return Object.assign({}, state, {
+          remaining: state.remaining - 20
+      })
     case POUR_BEER:
-      return 100;
+      return Object.assign({}, state, {
+          remaining: 100
+      })
     default:
       return state;
   }

@@ -1,28 +1,46 @@
 import React from 'react';
 
 import Customer from '../components/Customer'
+import { askForMore, drinkBeer } from '../actions'
 
 class CustomerContainer extends React.Component {
-    constructor(props) {
+    constructor(props, context) {
         super(props);
         
-        this.askForMore = this.askForMore.bind(this);
-        this.drinkBeer = this.drinkBeer.bind(this);
+        this.askForMoreHandler = this.askForMoreHandler.bind(this);
+        this.drinkBeerHandler = this.drinkBeerHandler.bind(this);
+        
+        this.store = context.store;
+        this.state = this.store.getState();
     }
     
-    askForMore(){
-        console.log('customer requests more beer');
+    componentWillMount() {
+        this.unsubscribe = this.store.subscribe(() => {
+            this.setState(this.store.getState());
+        });
     }
     
-    drinkBeer() {
-        console.log('customer drinks his or her beer');
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+    
+    askForMoreHandler(){
+        this.store.dispatch(askForMore());
+    }
+    
+    drinkBeerHandler() {
+        this.store.dispatch(drinkBeer());
     }
     
     render() {
         return (
-            <Customer name="John" askForMore={ this.askForMore } drinkBeer={ this.drinkBeer } />
+            <Customer name="John" askForMore={ this.askForMoreHandler } drinkBeer={ this.drinkBeerHandler } />
         );
     }
 }
+
+CustomerContainer.contextTypes = {
+  store: React.PropTypes.object  
+};
 
 module.exports = CustomerContainer;
