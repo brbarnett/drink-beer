@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Bar from './components/Bar.jsx';
+import Pub from './components/Pub.jsx';
 
-ReactDOM.render(<Bar />, document.getElementById('app'));
+ReactDOM.render(<Pub />, document.getElementById('app')); 

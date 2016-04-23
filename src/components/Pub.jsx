@@ -1,28 +1,31 @@
 import React from 'react';
+
+import Bartender from './Bartender.jsx';
 import Keg from './Keg.jsx';
 import Mug from './Mug.jsx';
 
-class Bar extends React.Component {
+class Pub extends React.Component {
     constructor(props) {
         super(props);
-        
+
         // this.handleClick = this.handleClick.bind(this);
     }
-    
+
     // handleClick() {
     //     console.log(this); // React Component instance
     // }
 
     render() {
         return (
-             <div>
+            <div>
+                <Bartender />
                 <Keg />
                 <Mug />
-             </div>
+            </div>
         );
     }
 }
-// Bar.defaultProps = { text: 'hello' };
-// Bar.propTypes = { text: React.PropTypes.string.isRequired };
+// Pub.defaultProps = { text: 'hello' };
+// Pub.propTypes = { text: React.PropTypes.string.isRequired };
 
-module.exports = Bar;
+module.exports = Pub;
