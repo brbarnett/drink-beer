@@ -13,7 +13,7 @@ class Header extends React.Component {
     }
 
     render() {
-        return <header onClick={this.handleClick}>Page Header</header>
+        return <header onClick={this.handleClick}>{this.props.text}</header>
     }
 }
 
@@ -21,7 +21,7 @@ class HelloWorld extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header text="This is the page header" />
                 <h1>Hello World</h1>
             </div>
         );
