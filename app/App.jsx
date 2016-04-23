@@ -16,6 +16,8 @@ class Header extends React.Component {
         return <header onClick={this.handleClick}>{this.props.text}</header>
     }
 }
+Header.defaultProps = { text: 'hello' };
+Header.propTypes = { text: React.PropTypes.string };
 
 class HelloWorld extends React.Component {
     constructor(props) {
@@ -37,7 +39,7 @@ class HelloWorld extends React.Component {
          
         return (
             <div>
-                <Header text="This is the page header" />
+                <Header text="Header" />
                 <h1 onClick={this.handleClick}>Hello World</h1>
                 <div>{this.state.counter}</div>
                 {trueDiv}
