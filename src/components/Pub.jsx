@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Bartender from './Bartender.jsx';
+import Customer from './Customer.jsx';
 import Keg from './Keg.jsx';
 import Mug from './Mug.jsx';
 
@@ -18,9 +19,10 @@ class Pub extends React.Component {
     render() {
         return (
             <div>
+                <Customer />
+                <Mug />
                 <Bartender />
                 <Keg />
-                <Mug />
             </div>
         );
     }
