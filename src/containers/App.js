@@ -10,7 +10,7 @@ import MugContainer from './MugContainer'
 
 const App = () => (
   <div className="container">
-    <h1>The Drunk Duck</h1>
+    <h1>The Drunken Duck</h1>
     <div className="col-xs-12 col-md-3">
       <CustomerContainer />
      </div>
@@ -26,18 +26,4 @@ const App = () => (
   </div>
 );
 
-// function mapStateToProps(state) {
-//   return {
-//     keg: state.keg,
-//     mug: state.mug
-//   }
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     actions: bindActionCreators(Actions, dispatch)
-//   }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(App)
 export default App

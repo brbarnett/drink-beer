@@ -29,7 +29,7 @@ class BartenderContainer extends React.Component {
 
     render() {
         return (
-            <Bartender name="Jack" pourBeer={ this.handlePourBeer } />
+            <Bartender beerRemainingInMug={ this.state.mug.remaining } beerRemainingInKeg={ this.state.keg.remaining } name="Jack" pourBeer={ this.handlePourBeer } />
         );
     }
 }

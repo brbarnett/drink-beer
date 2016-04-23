@@ -34,7 +34,7 @@ class CustomerContainer extends React.Component {
     
     render() {
         return (
-            <Customer name="John" askForMore={ this.askForMoreHandler } drinkBeer={ this.drinkBeerHandler } />
+            <Customer name="John" beerRemainingInMug={ this.state.mug.remaining } askForMore={ this.askForMoreHandler } drinkBeer={ this.drinkBeerHandler } />
         );
     }
 }
