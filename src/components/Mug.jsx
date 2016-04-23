@@ -11,10 +11,13 @@ class Mug extends React.Component {
         return (
             <div className="well">
                 <h2>Mug</h2>
-                <div>Remaining: {this.state.remaining}%</div>
+                <p>Beer: { this.props.beer }</p>
+                <div>Remaining: { this.state.remaining }%</div>
             </div>
         );
     }
 }
 
-module.exports = Mug;
+Mug.propTypes = { beer: React.PropTypes.string.isRequired };
+
+module.exports = Mug; 
