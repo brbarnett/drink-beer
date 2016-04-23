@@ -11,7 +11,7 @@ class Customer extends React.Component {
                 <h2>Customer</h2>
                 <p>Name: { this.props.name } </p>
                 {drinkButton}
-                <button className="btn btn-primary" onClick={ this.props.askForMore }>Ask for more</button>
+                {/*<button className="btn btn-primary" onClick={ this.props.askForMore }>Ask for more</button>*/}
             </div>
         );
     }
