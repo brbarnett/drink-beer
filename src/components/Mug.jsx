@@ -7,7 +7,10 @@ class Mug extends React.Component {
     
     render() {
         return (
-            <div>I am a mug</div>
+            <div>
+                <h2>Mug</h2>
+                <div>[ amount remaining ]</div>
+            </div>
         );
     }
 }

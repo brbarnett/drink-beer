@@ -4,10 +4,13 @@ class Bartender extends React.Component {
     constructor(props) {
         super(props);
     }
-    
+
     render() {
         return (
-            <div>I am a bartender</div>
+            <div>
+                <h2>Bartender</h2>
+                <button>Pour beer</button>
+            </div>
         );
     }
 }

@@ -4,10 +4,13 @@ class Keg extends React.Component {
     constructor(props) {
         super(props);
     }
-    
+
     render() {
         return (
-            <div>I am a keg</div>
+            <div>
+                <h2>Keg</h2>
+                <div>[ Amount remaining ]</div>
+            </div>
         );
     }
 }
