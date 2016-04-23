@@ -2,14 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.handleClick = this.handleClick.bind(this);
+    }
+    
+    handleClick() {
+        console.log(this); // React Component instance
+    }
+
     render() {
-        return <header>Page Header</header>
+        return <header onClick={this.handleClick}>Page Header</header>
     }
 }
 
 class HelloWorld extends React.Component {
     render() {
-        return <h1>Hello World</h1>
+        return (
+            <div>
+                <Header />
+                <h1>Hello World</h1>
+            </div>
+        );
     }
 }
 
