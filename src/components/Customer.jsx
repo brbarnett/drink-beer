@@ -7,10 +7,10 @@ class Customer extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className="well">
                 <h2>Customer</h2>
-                <button>Drink beer</button>
-                <button>Ask for more</button>
+                <button className="btn btn-primary">Drink beer</button>
+                <button className="btn btn-primary">Ask for more</button>
             </div>
         );
     }

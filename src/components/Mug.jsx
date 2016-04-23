@@ -7,7 +7,7 @@ class Mug extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className="well">
                 <h2>Mug</h2>
                 <div>[ amount remaining ]</div>
             </div>

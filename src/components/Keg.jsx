@@ -7,7 +7,7 @@ class Keg extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="well">
                 <h2>Keg</h2>
                 <div>[ Amount remaining ]</div>
             </div>

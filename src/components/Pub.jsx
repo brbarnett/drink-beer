@@ -18,11 +18,19 @@ class Pub extends React.Component {
 
     render() {
         return (
-            <div>
-                <Customer />
-                <Mug />
-                <Bartender />
-                <Keg />
+            <div className="container">
+                <div className="col-xs-12 col-md-3">
+                    <Customer />
+                </div>
+                <div className="col-xs-12 col-md-3">
+                    <Mug />
+                </div>
+                <div className="col-xs-12 col-md-3">
+                    <Bartender />
+                </div>
+                <div className="col-xs-12 col-md-3">
+                    <Keg />
+                </div>
             </div>
         );
     }

@@ -7,9 +7,9 @@ class Bartender extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="well">
                 <h2>Bartender</h2>
-                <button>Pour beer</button>
+                <button className="btn btn-primary">Pour beer</button>
             </div>
         );
     }
