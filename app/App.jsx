@@ -17,7 +17,7 @@ class Header extends React.Component {
     }
 }
 Header.defaultProps = { text: 'hello' };
-Header.propTypes = { text: React.PropTypes.string };
+Header.propTypes = { text: React.PropTypes.string.isRequired };
 
 class HelloWorld extends React.Component {
     constructor(props) {
