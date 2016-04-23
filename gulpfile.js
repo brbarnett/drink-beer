@@ -23,8 +23,8 @@ function buildHtml() {
 
 function buildJs() {
     return gulp.src('src/app.jsx')
-        .pipe(jshint({ esversion: 6 }))
-        .pipe(jshint.reporter('jshint-stylish'))
+        // .pipe(jshint({ esversion: 6 }))
+        // .pipe(jshint.reporter('jshint-stylish'))
         .pipe(webpack(wpConfig))
         .pipe(gulp.dest('dist/'));
 }

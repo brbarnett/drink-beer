@@ -28,4 +28,4 @@ class Pub extends React.Component {
 // Pub.defaultProps = { text: 'hello' };
 // Pub.propTypes = { text: React.PropTypes.string.isRequired };
 
-module.exports = Pub;
+module.exports = Pub; 
