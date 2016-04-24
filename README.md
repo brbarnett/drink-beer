@@ -7,4 +7,4 @@ React, Redux, Webpack
 - "gulp build"
 - "node server"
 
-Note: this requires that Node.js is installed on your computer
+Note: this requires Node.js >= 0.12.x
