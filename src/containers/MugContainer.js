@@ -22,7 +22,9 @@ class MugContainer extends React.Component {
     
     render() {
         return (
-            <Mug beer="Porter" remaining={ this.state.mug.remaining } />
+            <Mug 
+                beer="Porter" 
+                remaining={ this.state.mug.remaining } />
         );
     }
 }
@@ -31,4 +33,4 @@ MugContainer.contextTypes = {
   store: React.PropTypes.object  
 };
 
-module.exports = MugContainer;
+export default MugContainer

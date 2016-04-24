@@ -29,7 +29,11 @@ class BartenderContainer extends React.Component {
 
     render() {
         return (
-            <Bartender beerRemainingInMug={ this.state.mug.remaining } beerRemainingInKeg={ this.state.keg.remaining } name="Jack" pourBeer={ this.handlePourBeer } />
+            <Bartender 
+                beerRemainingInMug={ this.state.mug.remaining } 
+                beerRemainingInKeg={ this.state.keg.remaining } 
+                name="Jack" 
+                pourBeer={ this.handlePourBeer } />
         );
     }
 }
@@ -38,4 +42,4 @@ BartenderContainer.contextTypes = {
   store: React.PropTypes.object  
 };
 
-module.exports = BartenderContainer;
+export default BartenderContainer

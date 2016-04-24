@@ -34,7 +34,10 @@ class CustomerContainer extends React.Component {
     
     render() {
         return (
-            <Customer name="John" beerRemainingInMug={ this.state.mug.remaining } askForMore={ this.askForMoreHandler } drinkBeer={ this.drinkBeerHandler } />
+            <Customer 
+                name="John" 
+                beerRemainingInMug={ this.state.mug.remaining } 
+                drinkBeer={ this.drinkBeerHandler } />
         );
     }
 }
@@ -43,4 +46,4 @@ CustomerContainer.contextTypes = {
   store: React.PropTypes.object  
 };
 
-module.exports = CustomerContainer;
+export default CustomerContainer

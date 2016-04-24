@@ -31,4 +31,4 @@ KegContainer.contextTypes = {
   store: React.PropTypes.object  
 };
 
-module.exports = KegContainer;
+export default KegContainer
