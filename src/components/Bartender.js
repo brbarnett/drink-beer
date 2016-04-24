@@ -1,20 +1,18 @@
 import React from 'react';
 
-class Bartender extends React.Component {
-    render() {
-        const pourButton = this.props.beerRemainingInKeg > 0 && this.props.beerRemainingInMug === 0 
-            ? <button className="btn btn-primary" onClick={ this.props.pourBeer }>Pour beer</button>
+const Bartender = ({ beerRemainingInKeg, beerRemainingInMug, name, pourBeer }) => {
+    const pourButton = beerRemainingInKeg > 0 && beerRemainingInMug === 0 
+            ? <button className="btn btn-primary" onClick={ pourBeer }>Pour beer</button>
             : null;
             
         return (
             <div className="well">
                 <h2>Bartender</h2>
-                <p>Name: { this.props.name }</p>
-                {pourButton}
+                <p>Name: { name }</p>
+                { pourButton }
             </div>
         );
-    }
-}
+};
 
 Bartender.propTypes = { 
     beerRemainingInKeg: React.PropTypes.number.isRequired,
@@ -23,4 +21,4 @@ Bartender.propTypes = {
     pourBeer: React.PropTypes.func.isRequired
  };
 
-module.exports = Bartender;
+export default Bartender 
