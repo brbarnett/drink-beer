@@ -1,49 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
 import Customer from '../components/Customer'
-import { askForMore, drinkBeer } from '../actions'
+import { drinkBeer } from '../actions'
 
-class CustomerContainer extends React.Component {
-    constructor(props, context) {
-        super(props);
-        
-        this.askForMoreHandler = this.askForMoreHandler.bind(this);
-        this.drinkBeerHandler = this.drinkBeerHandler.bind(this);
-        
-        this.store = context.store;
-        this.state = this.store.getState();
-    }
-    
-    componentWillMount() {
-        this.unsubscribe = this.store.subscribe(() => {
-            this.setState(this.store.getState());
-        });
-    }
-    
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-    
-    askForMoreHandler(){
-        this.store.dispatch(askForMore());
-    }
-    
-    drinkBeerHandler() {
-        this.store.dispatch(drinkBeer());
-    }
-    
-    render() {
-        return (
-            <Customer 
-                name="John" 
-                beerRemainingInMug={ this.state.mug.remaining } 
-                drinkBeer={ this.drinkBeerHandler } />
-        );
-    }
-}
-
-CustomerContainer.contextTypes = {
-  store: React.PropTypes.object  
+const mapStateToProps = (state) => {
+  return { 
+      beerRemainingInMug: state.mug.remaining,
+      name: 'John'
+    };
 };
 
-export default CustomerContainer
+const mapDispatchToProps = (dispatch) => {
+  return { 
+      drinkBeer: () => {
+          dispatch(drinkBeer())
+      } 
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Customer) 

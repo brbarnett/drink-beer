@@ -1,34 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
 import Keg from '../components/Keg'
 
-class KegContainer extends React.Component {
-    constructor(props, context) {
-        super(props);
-        
-        this.store = context.store;
-        this.state = this.store.getState();
-    }
-    
-    componentWillMount() {
-        this.unsubscribe = this.store.subscribe(() => {
-            this.setState(this.store.getState());
-        });
-    }
-    
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-    
-    render() {
-        return (
-            <Keg remaining={ this.state.keg.remaining } />
-        );
-    }
-}
-
-KegContainer.contextTypes = {
-  store: React.PropTypes.object  
+const mapStateToProps = (state) => {
+  return { 
+      remaining: state.keg.remaining
+    };
 };
 
-export default KegContainer
+export default connect(mapStateToProps)(Keg) 
