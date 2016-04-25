@@ -1,6 +1,4 @@
-import {
-  POUR_BEER
-} from '../constants/ActionTypes'
+import { POUR_BEER } from '../constants/ActionTypes'
 
  const keg = (state = { remaining: 100 }, action) => {
   switch (action.type) {

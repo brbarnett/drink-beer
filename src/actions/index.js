@@ -1,13 +1,9 @@
 import * as types from '../constants/ActionTypes'
 
-export function askForMore() {
-  return { type: types.ASK_FOR_MORE }
+export const drinkBeer = () => {
+    return { type: types.DRINK_BEER };
 }
 
-export function drinkBeer() {
-  return { type: types.DRINK_BEER }
-}
-
-export function pourBeer() {
-  return { type: types.POUR_BEER }
+export const pourBeer = () => {
+    return { type: types.POUR_BEER };
 }

@@ -1,45 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import Bartender from '../components/Bartender'
 import { pourBeer } from '../actions'
 
-class BartenderContainer extends React.Component {
-    constructor(props, context) {
-        super(props);
-        
-        this.handlePourBeer = this.handlePourBeer.bind(this);
-        
-        this.store = context.store;
-        this.state = this.store.getState();
-    }
-    
-    componentWillMount() {
-        this.unsubscribe = this.store.subscribe(() => {
-            this.setState(this.store.getState());
-        });
-    }
-    
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-    
-    handlePourBeer() {
-        this.store.dispatch(pourBeer());
-    }
-
-    render() {
-        return (
-            <Bartender 
-                beerRemainingInMug={ this.state.mug.remaining } 
-                beerRemainingInKeg={ this.state.keg.remaining } 
-                name="Jack" 
-                pourBeer={ this.handlePourBeer } />
-        );
-    }
-}
-
-BartenderContainer.contextTypes = {
-  store: React.PropTypes.object  
+const mapStateToProps = (state) => {
+  return { 
+      beerRemainingInMug: state.mug.remaining, 
+      beerRemainingInKeg: state.keg.remaining,
+      name: 'Jack'
+    };
 };
 
-export default BartenderContainer
+const mapDispatchToProps = (dispatch) => {
+  return { 
+      pourBeer: () => {
+          dispatch(pourBeer())
+      } 
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Bartender) 

@@ -1,7 +1,4 @@
-import {
-  DRINK_BEER,
-  POUR_BEER
-} from '../constants/ActionTypes'
+import { DRINK_BEER, POUR_BEER } from '../constants/ActionTypes'
 
  const mug = (state = { remaining: 0 }, action) => {
   switch (action.type) {
