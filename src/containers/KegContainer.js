@@ -5,6 +5,7 @@ import Keg from '../components/Keg'
 
 const mapStateToProps = (state) => {
   return { 
+      loading: state.keg.isFetching,
       remaining: state.keg.remaining
     };
 };

@@ -1,12 +1,19 @@
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
-import { createStore } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import createLogger from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import App from './containers/App'
 import drinkBeerApp from './reducers'
 
-const store = createStore(drinkBeerApp);
+const loggerMiddleware = createLogger();
+
+const store = createStore(
+    drinkBeerApp,
+    applyMiddleware(thunkMiddleware, loggerMiddleware)
+    );
 
 const rootElement = document.getElementById('root')
 render(
