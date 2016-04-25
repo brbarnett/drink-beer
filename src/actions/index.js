@@ -20,7 +20,7 @@ export const fetchKegRemaining = () => {
         dispatch(requestKegRemaining());
     
         setTimeout(() => {
-        dispatch(receiveKegRemaining(100));
+            dispatch(receiveKegRemaining(100));
         }, 500);
     };
 }

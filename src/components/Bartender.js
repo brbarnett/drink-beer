@@ -5,13 +5,13 @@ const Bartender = ({ beerRemainingInKeg, beerRemainingInMug, name, pourBeer }) =
             ? <button className="btn btn-primary" onClick={ pourBeer }>Pour beer</button>
             : null;
             
-        return (
-            <div className="well">
-                <h2>Bartender</h2>
-                <p>Name: { name }</p>
-                { pourButton }
-            </div>
-        );
+    return (
+        <div className="well">
+            <h2>Bartender</h2>
+            <p>Name: { name }</p>
+            { pourButton }
+        </div>
+    );
 };
 
 Bartender.propTypes = { 
