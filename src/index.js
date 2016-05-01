@@ -13,12 +13,12 @@ const loggerMiddleware = createLogger();
 const store = createStore(
     drinkBeerApp,
     applyMiddleware(thunkMiddleware, loggerMiddleware)
-    );
+);
 
 const rootElement = document.getElementById('root')
 render(
     <Provider store={ store }>
         <App />
     </Provider>,
-  rootElement
-  );
+    rootElement
+); 
