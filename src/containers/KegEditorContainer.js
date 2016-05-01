@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return { 
-      poursetKegRemainingBeer: () => {
+      setKegRemaining: () => {
           //dispatch(pourBeer())
           console.log('update');
       } 
