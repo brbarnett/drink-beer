@@ -30,9 +30,8 @@ const rootElement = document.getElementById('root')
 render(
     <Provider store={ store }>
         <Router history={ history }>
-            <Route path="/" component={ App }>
-                <Route path="admin" component={ Admin }/>
-            </Route>
+            <Route path="/" component={ App } />
+            <Route path="/admin" component={ Admin }/>
         </Router>
     </Provider>,
     rootElement
